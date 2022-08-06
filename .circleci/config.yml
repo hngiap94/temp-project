@@ -26,9 +26,10 @@ jobs:
           name: "Run ansible"
           command: |
             echo $(ls)
-            # ansible-playbook -i inventory.txt main.yml
+            ansible-playbook -i inventory.txt main.yml
 
 workflows:
   default:
     jobs:
       - hello
+      - test-ssh
